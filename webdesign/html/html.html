@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vistex | Web Design</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/glitch.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/index.html" class="company">Vistex</a>
+
+        <div id="content-desktop" class="tabs">
+            <a href="/index.html" class="hover">Home</a>
+            <div class="desktopdropdown">
+                <a href="/webdesign.html" class="hoveractive">Web Design</a>
+                <div class="desktopdropdown-content">
+                    <a href="/webdesign/html.html" class="hover">HTML</a>
+                    <a href="/webdesign/css.html" class="hover">CSS</a>
+                </div>
+            </div>
+            <form action="/contactus.html"><button type="submit">Contact Us</button></form>
+        </div>
+
+        <div id="content-mobile" class="mobiletabs">
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+            <div id="dropdownmenu" class="dropdown-content">
+                <a class="closedropdown" onclick="closeDropMenu()">X</a>
+                <a href="/index.html">Home</a>
+                <a href="/webdesign.html">Web Design</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div id="mobilenavbar">
+            <a href="/index.html" class="company">Vistex</a>
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="justify-content: space-evenly; margin-top: 50px; flex-direction: column;">
+        <div class="glitchtext" title="HTML">
+            <div class="glitchtext" title="HTML">HTML</div>
+        </div>
+        <div style="display: flex; flex-direction: row; flex-flow: row wrap;">
+            <p style="font-size: 18px; color: rgba(0,0,0,0.5); padding-right: 15px;">Not case sensitive,</p>
+            <p style="font-size: 18px; color: rgba(0,0,0,0.5); padding-right: 15px;">Not well expressive,</p>
+            <p style="font-size: 18px; color: rgba(0,0,0,0.5); padding-right: 15px;">Not working.</p>
+        </div>
+        <div style="display: flex; flex-direction: row; flex-flow: row wrap;">
+            <p class="glitchimg">&lt;img&gt;</p>
+            <a class="glitchbutton">error loading syntax file</a>
+        </div>
+        <form action="/webdesign/html/xhtml.html"><button class="gotopage" type="submit">See the difference with XHTML</button></form>
+    </div>
+</body>
+
+</html>

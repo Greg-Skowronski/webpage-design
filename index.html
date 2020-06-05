@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vistex | Home</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/index.html" class="company">Vistex</a>
+
+        <div id="content-desktop" class="tabs">
+            <a href="/index.html" class="hoveractive">Home</a>
+            <div class="desktopdropdown">
+                <a href="/webdesign.html" class="hover">Web Design</a>
+                <div class="desktopdropdown-content">
+                    <a href="/webdesign/html.html" class="hover">HTML</a>
+                    <a href="/webdesign/css.html" class="hover">CSS</a>
+                </div>
+            </div>
+            <form action="/contactus.html"><button type="submit">Contact Us</button></form>
+        </div>
+
+        <div id="content-mobile" class="mobiletabs">
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+            <div id="dropdownmenu" class="dropdown-content">
+                <a class="closedropdown" onclick="closeDropMenu()">X</a>
+                <a href="/index.html">Home</a>
+                <a href="/webdesign.html">Web Design</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div id="mobilenavbar">
+            <a href="/index.html" class="company">Vistex</a>
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <h1 id="h1-text">Now it all adds up.</h1>
+            <form action="/webdesign.html"><button type="submit">Learn more...</button></form>
+        </div>
+        <div class="services">
+            <div class="popup">
+                <p class="title">Business Advisory</p>
+                <div class="caption">Helping your business define and implement best practices to ensure maximum ROI
+                    from your Vistex software implementation.</div>
+            </div>
+            <div class="popup">
+                <p class="title">CRM Integration</p>
+                <div class="caption">Extend CRM to manage and report on your Go-to-Market programs and enable a
+                    360-degree
+                    view of your business</div>
+            </div>
+            <div class="popup">
+                <p class="title">Global Payments</p>
+                <div class="caption">Our payment services offer flexible payment options, exceptional security and
+                    reduced
+                    overhead - globally.</div>
+            </div>
+        </div>
+        <p class="info">When you can’t account for everything, there’s Vistex.</p>
+    </div>
+</body>
+
+</html>

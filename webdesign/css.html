@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vistex | Web Design</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/index.html" class="company">Vistex</a>
+
+        <div id="content-desktop" class="tabs">
+            <a href="/index.html" class="hover">Home</a>
+            <div class="desktopdropdown">
+                <a href="/webdesign.html" class="hoveractive">Web Design</a>
+                <div class="desktopdropdown-content">
+                    <a href="/webdesign/html.html" class="hover">HTML</a>
+                    <a href="/webdesign/css.html" class="hover">CSS</a>
+                </div>
+            </div>
+            <form action="/contactus.html"><button type="submit">Contact Us</button></form>
+        </div>
+
+        <div id="content-mobile" class="mobiletabs">
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+            <div id="dropdownmenu" class="dropdown-content">
+                <a class="closedropdown" onclick="closeDropMenu()">X</a>
+                <a href="/index.html">Home</a>
+                <a href="/webdesign.html">Web Design</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div id="mobilenavbar">
+            <a href="/index.html" class="company">Vistex</a>
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="justify-content: space-evenly; margin-top: 50px;">
+        <div>
+            <p class="code" id="codecss"></p>
+            <div class="codename" id="codename">Cascading Style Sheets</div>
+            <p class="click-below">Click below to toogle CSS.</p>
+            <button id="toogle-button" class="toogle-effect" onclick="toogleEffect()">Turn On</button>
+        </div>
+        <div class="tablet">
+            <div class="tabletscreen" id="tabletscreen">
+                <h2>CSS</h2>
+                <br>
+                <p>Faster Greater Prettier</p>
+                <br><br>
+                <div>It is evident that the pages developed according to a standard and with maximum reduction of barriers, transmit an intelligent business image. Why give up a large number of potential clients, or a faster page, with a better search engine ranking?</div>
+                <br>
+                <p>Is it magic or not yet?</p>
+            </div>
+            <div class="tabletscreencss" id="tabletscreencss">
+                <div class="headercss">
+                    <h2>CSS</h2>
+                    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+                        <p>Faster</p>
+                        <p>Greater</p>
+                        <p>Prettier</p>
+                    </div>
+                </div>
+                <div class="bodycss">
+                    <br><br>
+                    <div>It is evident that the pages developed according to a standard and with maximum reduction of barriers, transmit an intelligent business image. Why give up a large number of potential clients, or a faster page, with a better search engine ranking?</div>
+                    <br>
+                    <h3>Is it magic or not yet?</h3>
+                </div>
+            </div>
+            <div class="homebutton" onclick="toogleEffect()"></div>
+        </div>
+    </div>
+</body>
+
+</html>

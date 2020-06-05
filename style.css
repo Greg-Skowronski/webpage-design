@@ -1,0 +1,999 @@
+@font-face {
+  src: url(fonts/Montserrat-Bold.ttf);
+  font-family: Montserrat Bold;
+}
+
+@font-face {
+  src: url(fonts/Montserrat-Regular.ttf);
+  font-family: Montserrat Regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Regular";
+  cursor: default;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #fc466b, #3f5efb);
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: appear 0.3s infinite;
+  animation-iteration-count: 1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.company {
+  color: white;
+  font-size: 40px;
+  font-family: "Montserrat Bold";
+  margin-left: 60px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 500px;
+  color: white;
+  font-size: 16px;
+  padding-top: 18px;
+}
+
+.tabs a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabs button {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  margin-top: -10px;
+  background: transparent;
+  width: 120px;
+  height: 40px;
+  color: #fc466b;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.tabs button:hover {
+  transform: scale(1.2);
+}
+
+.tabs button:active {
+  transform: scale(0.9);
+}
+
+.mobiletabs p {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin-top: 7px;
+  margin-right: 70px;
+}
+
+#content-desktop {
+  display: flex;
+}
+#content-mobile {
+  display: none;
+}
+.content {
+  margin-top: 100px;
+}
+@media screen and (max-width: 768px) {
+  #content-desktop {
+    display: none;
+  }
+  #content-mobile {
+    display: flex;
+  }
+  .content {
+    margin-top: 0px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.text {
+  width: 450px;
+}
+
+.text h1 {
+  font-family: "Montserrat Bold";
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.text h2 {
+  font-family: "Montserrat Bold";
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.text button {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  margin-top: 40px;
+  background: transparent;
+  width: 160px;
+  height: 50px;
+  color: #fc466b;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.text button:hover {
+  transform: scale(1.2);
+}
+
+.text button:active {
+  transform: scale(0.9);
+}
+
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.popup {
+  width: 210px;
+  background-color: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  border-radius: 15px;
+  margin: 50px 25px 20px 25px;
+  transition: all 0.2s ease;
+}
+
+.popup:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  font-family: "Montserrat Bold";
+  color: #fc466b;
+  padding-bottom: 20px;
+}
+
+.caption {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.info {
+  width: 80%;
+  text-align: center;
+  margin-top: 100px;
+
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+a.hover {
+  position: relative;
+  padding-bottom: 11px;
+}
+
+a.hover:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.hover:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+a.hoveractive {
+  position: relative;
+  padding-bottom: 11px;
+}
+
+a.hoveractive:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: visible;
+}
+
+#mobilenavbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  z-index: 1;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+
+  background-color: white; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  height: 100px;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+#mobilenavbar {
+  display: none;
+}
+
+#h1-text {
+  font-size: 80px;
+}
+
+#h2-text {
+  font-size: 60px;
+  margin-left: 100px;
+  margin-top: 0px;
+}
+
+#codename {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  #mobilenavbar {
+    display: flex;
+  }
+
+  #mobilenavbar a {
+    color: #fc466b;
+  }
+
+  .menuicon {
+    display: block;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .menuicon p {
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  #mobilenavbar p {
+    width: 30px;
+    height: 3px;
+    background-color: #fc466b;
+    margin-top: 7px;
+    margin-right: 70px;
+  }
+
+  #h1-text {
+    font-size: 60px;
+  }
+
+  #h2-text {
+    font-size: 40px;
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+
+  #codename {
+    font-size: 50px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  right: 20px;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0px 16px 18px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  color: #fc466b;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.closedropdown {
+  text-align: right;
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 200px;
+  width: 200px;
+  height: 400px;
+  background: white;
+  box-shadow: 0px 0px 0px 10px #000046, 10px 10px 30px 0px black;
+  border-radius: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.notch {
+  background-color: #000046;
+  width: 90px;
+  height: 15px;
+  align-self: center;
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 30px;
+}
+
+.swipehome {
+  background-color: #000046;
+  width: 70px;
+  height: 4px;
+  align-self: center;
+  border-radius: 2px;
+  margin-top: 70px;
+}
+
+.msgleft {
+  width: auto;
+  max-width: 60%;
+  padding: 10px 15px;
+  margin: 8px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  flex-flow: row wrap;
+  position: relative;
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.1);
+  color: gray;
+  border-bottom-left-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.msgleft:hover {
+  transform: scale(1.1);
+}
+
+.msgright {
+  width: auto;
+  max-width: 60%;
+  padding: 10px 15px;
+  margin: 8px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  flex-flow: row wrap;
+  position: relative;
+  align-self: flex-end;
+  background: #fc466b;
+  color: white;
+  border-bottom-right-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.msgright:hover {
+  transform: scale(1.1);
+}
+
+.smallpopup {
+  width: 140px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  border-radius: 15px;
+  margin: 35px 25px 0px 25px;
+}
+
+.smallpopup p {
+  text-align: center;
+}
+
+.smallpopup form {
+  text-align: center;
+}
+
+.smallpopup button {
+  font-family: "Montserrat Bold";
+  font-size: 17px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: #fc466b;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.smallpopup button:hover {
+  transform: scale(1.2);
+}
+
+.smallpopup button:active {
+  transform: scale(0.9);
+}
+
+
+.graphics {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.bothpopups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bothpopups h2 {
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.code {
+  font-size: 30px;
+  font-family: "Montserrat Bold";
+  background-color: white;
+  padding: 5px;
+  color: #fc466b;
+  width: 120px;
+}
+
+.codename {
+  color: white; 
+  width: 300px; 
+  font-family: 'Montserrat Bold';
+  margin-bottom: 50px;
+}
+
+.tablet {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 240px;
+  width: 306px;
+  height: 480px;
+  background: #000046;
+  box-shadow: 0px 0px 0px 10px #000046, 10px 10px 30px 0px black;
+  border-radius: 20px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.tabletscreen {
+  display: block;
+  background: white;
+  max-width: 300px;
+  height: 80%;
+  margin-left: 3px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+  padding: 10px;
+  animation: appear 0.3s infinite;
+  animation-iteration-count: 1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.homebutton {
+  height: 35px;
+  width: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  align-self: center;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.homebutton:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tabletscreencss {
+  display: none;
+  /*background-image: linear-gradient(to top, #bc4e9c 40%, #fc466b);*/
+  background-image: linear-gradient(to bottom right, #bc4e9c, #3f5efb);
+  max-width: 300px;
+  height: 80%;
+  margin-left: 3px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+  animation: appear 0.3s infinite;
+  animation-iteration-count: 1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tabletscreencss h2 {
+  font-family: "Montserrat Bold";
+  color: white;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  font-size: 28px;
+}
+
+.tabletscreencss p {
+  font-family: "Montserrat Bold";
+  background-color: white;
+  font-size: 11px;
+  border-radius: 20px;
+  color: #fc466b;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 7px 0px;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.7);
+  width: 70px;
+  text-align: center;
+}
+
+.tabletscreencss div {
+  color: rgba(0, 0, 0, 0.4);
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+  font-size: 13px;
+}
+
+.tabletscreencss h3 {
+  font-family: "Montserrat Bold";
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #fc466b;
+  text-shadow: 0px 0px 12px #fc466b;
+}
+
+.showeffect {
+  display: block;
+}
+
+.hideeffect {
+  display: none;
+}
+
+.click-below {
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.3);
+  padding-bottom: 5px;
+}
+
+.toogle-effect {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background: transparent;
+  width: 120px;
+  height: 40px;
+  color: #fc466b;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.toogle-effect:hover {
+  transform: scale(1.2);
+}
+
+.toogle-effect:active {
+  transform: scale(0.9);
+}
+
+
+.headercss {
+  padding-bottom: 10px;
+}
+
+.bodycss {
+  position: absolute;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 300px;
+  height: 53.6%; 
+}
+
+.desktopdropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.desktopdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  margin-top: 11px;
+  margin-left: 19px;
+  width: 60px;
+  z-index: 1;
+  text-align: center;
+}
+
+.desktopdropdown-content a {
+  color: white;
+  padding: 9px 0px 9px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.desktopdropdown:hover .desktopdropdown-content {display: block;}
+
+.tabletscreenhtml {
+  display: none;
+  background-color: white;
+  max-width: 300px;
+  height: 80%;
+  margin-left: 3px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+  animation: appear 0.1s infinite;
+  animation-iteration-count: 1;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.showeffect {
+  display: block;
+}
+
+.hideeffect {
+  display: none;
+}
+
+.error {
+  font-family: "Montserrat Bold";
+  font-size: 35px;
+  padding-top: 160px;
+  text-align: center;
+  color: #fc466b;
+}
+
+.errorcaption {
+  text-align: center;
+  margin-top: 45%;
+  padding: 0px 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.errorwindow {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  padding: 15px 10px;
+  max-width: 400px;
+  box-shadow: 0px -20px 0px 0px #fc466b, 0px -5px 70px 10px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.errorwindow p {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+
+.errorwindow h4 {
+  font-size: 14px;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.errorwindow a {
+  color: #fc466b;
+  cursor: pointer;
+}
+
+.contactinfo {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.contactinfo p {
+  font-size: 13px;
+  color: #fc466b;
+  margin-top: 20px;
+}
+
+.contactinfo h1 {
+  font-family: "Montserrat Bold";
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.contactinfo h2 {
+  font-family: "Montserrat Bold";
+  font-size: 20px;
+  margin-left: 20px;
+  background-color: white;
+  box-shadow: 0px 1px 0px 0px #fc466b;
+  margin-bottom: 10px;
+}
+
+.contactinfo h3 {
+  font-size: 15px;
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.contactformbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background-color: white;
+  padding: 20px 25px 10px 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.contactformbox p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #fc466b;
+}
+
+.contactformbox label {
+  align-self: flex-start;
+  font-size: 14px;
+}
+
+.contactformbox input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: black;
+  border-radius: 20px;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  caret-color: #fc466b;
+  transition: all 0.3s ease;
+}
+
+.contactformbox input:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contactformbox button {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  margin: 5px 0px 10px 0px;
+  background: transparent;
+  width: 120px;
+  height: 40px;
+  color: #fc466b;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.contactformbox button:hover {
+  transform: scale(1.2);
+}
+
+.contactformbox button:active {
+  transform: scale(0.9);
+}
+
+.glitchimg {
+  background-color: white;
+  width: 200px;
+  height: 250px;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.glitchbutton {
+  font-family: "Montserrat Bold";
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.gotopage {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  margin-top: 50px;
+  background: transparent;
+  width: 200px;
+  height: 50px;
+  color: #fc466b;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.gotopage:hover {
+  transform: scale(1.2);
+}
+
+.gotopage:active {
+  transform: scale(0.9);
+}
+
+.noglitchtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: white;
+  font-size: 80px;
+  font-family: "Montserrat Bold";
+}
+
+.pc-screen {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  width: 320px;
+  height: 200px;
+  background: white;
+  box-shadow: 0px 20px 0px 10px #000046, 0px 0px 0px 10px #000046, 10px 10px 30px 0px black;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.pc-stand {
+  margin-top: 210px;
+  border-bottom: 50px solid #000046;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-radius: 20px;
+  height: 0;
+  width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .pc-screen {
+    width: 200px;
+    height: 120px;
+  }
+  .pc-stand {
+    margin-top: 130px;
+  }
+  
+  .noglitchtext {
+    font-size: 70px;
+  }
+}
+
+.rightchoice {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}

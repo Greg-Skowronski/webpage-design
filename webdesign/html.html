@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vistex | Web Design</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/index.html" class="company">Vistex</a>
+
+        <div id="content-desktop" class="tabs">
+            <a href="/index.html" class="hover">Home</a>
+            <div class="desktopdropdown">
+                <a href="/webdesign.html" class="hoveractive">Web Design</a>
+                <div class="desktopdropdown-content">
+                    <a href="/webdesign/html.html" class="hover">HTML</a>
+                    <a href="/webdesign/css.html" class="hover">CSS</a>
+                </div>
+            </div>
+            <form action="/contactus.html"><button type="submit">Contact Us</button></form>
+        </div>
+
+        <div id="content-mobile" class="mobiletabs">
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+            <div id="dropdownmenu" class="dropdown-content">
+                <a class="closedropdown" onclick="closeDropMenu()">X</a>
+                <a href="/index.html">Home</a>
+                <a href="/webdesign.html">Web Design</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div id="mobilenavbar">
+            <a href="/index.html" class="company">Vistex</a>
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="justify-content: space-evenly; margin-top: 50px;">
+        <div>
+            <p class="code" id="codehtml"></p>
+            <div class="codename" id="codename">HyperText Markup Language</div>
+            <p class="click-below">Click below to toogle HTML.</p>
+            <button id="toogle-button" class="toogle-effect" onclick="toogleEffect()">Turn Off</button>
+        </div>
+        <div class="tablet">
+            <div class="tabletscreen" id="tabletscreen">
+                <h2>HTML</h2>
+                <br>
+                <p>Imagine Build Use</p>
+                <br>
+                <div>Of all the web programming languages, HTML is the most search engine friendly. Creating SEO compliant websites using HTML is significantly easier than any other programming language. HTML causes the least SEO complications and provides the greatest flexibility.</div>
+                <br>
+                <p>Is it magic or not yet?</p>
+            </div>
+            <div class="tabletscreenhtml" id="tabletscreenhtml">
+                <div class="error">&lt;/error&gt;</div>
+                <p class="errorcaption">To learn about the error click round button below.</p>
+            </div>
+            <div class="homebutton" onclick="showError()"></div>
+        </div>
+        <div class="errorwindow" id="errorwindow">
+            <p>Last login: Sat Jan 18 19:45:43 on sys00</p>
+            <p>.bash profile loaded!</p>
+            <p>vistex-server: fatal error</p>
+            <p>vistex-server: unable to run website</p>
+            <p>&gt;_</p>
+            <h4>With no strict error handling problems can happen at any time. Thankfully, XHTML comes to us with a solution for this. Press one of the hyperlinks below to learn more about HTML or XHTML:</h4>
+            <a href="/webdesign/html/html.html">./HTML</a>
+            <br>
+            <a href="/webdesign/html/xhtml.html">./XHTML</a>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>

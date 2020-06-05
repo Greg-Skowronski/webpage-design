@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vistex | Web Design</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/index.html" class="company">Vistex</a>
+
+        <div id="content-desktop" class="tabs">
+            <a href="/index.html" class="hover">Home</a>
+            <div class="desktopdropdown">
+                <a href="/webdesign.html" class="hoveractive">Web Design</a>
+                <div class="desktopdropdown-content">
+                    <a href="/webdesign/html.html" class="hover">HTML</a>
+                    <a href="/webdesign/css.html" class="hover">CSS</a>
+                </div>
+            </div>
+            <form action="/contactus.html"><button type="submit">Contact Us</button></form>
+        </div>
+
+        <div id="content-mobile" class="mobiletabs">
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+            <div id="dropdownmenu" class="dropdown-content">
+                <a class="closedropdown" onclick="closeDropMenu()">X</a>
+                <a href="/index.html">Home</a>
+                <a href="/webdesign.html">Web Design</a>
+                <a href="/contactus.html">Contact Us</a>
+            </div>
+        </div>
+        <div id="mobilenavbar">
+            <a href="/index.html" class="company">Vistex</a>
+            <div class="menuicon" onclick="showDropMenu()">
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+                <p class="iconbar"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="justify-content: center;">
+        <div class="graphics">
+            <div class="phone">
+                <div class="notch"></div>
+                <div class="msgleft">First impression</div>
+                <div class="msgright">Great UX</div>
+                <div class="msgleft">Functionality</div>
+                <div class="msgright">Beautiful UI</div>
+                <div class="msgleft">Here in <u>Vistex</u> we take care of all these things.</div>
+                <div class="swipehome"></div>
+            </div>
+            <div class="bothpopups">
+                <h2>Technologies</h2>
+                <div class="smallpopup">
+                    <p class="title">HTML</p>
+                    <form action="/webdesign/html.html"><button type="submit">Go!</button></form>
+                </div>
+                <div class="smallpopup">
+                    <p class="title">CSS</p>
+                    <form action="/webdesign/css.html"><button type="submit">Go!</button></form>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <h2 id="h2-text">Simple, yet functional.</h2>
+        </div>
+    </div>
+</body>
+
+</html>
